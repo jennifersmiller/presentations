@@ -1,0 +1,111 @@
+------------------------------------------
+Inheritance and Composition (Ch 12)
+	This presentation covers
+		Inheritance
+		Composition
+------------------------------------------
+Overview
+	Classes can be created using existing classes using Inheritance and/or Composition
+	Inheritance 
+		Implements an "is-a" relationship
+		One class is based on another
+		For example:
+			pokemon
+				pikachu (pikachu is a type of pokemon)
+	Composition (or aggregation) 
+		Implements a "has-a" relationship
+		One class contains another 
+		For example:
+			pokeBall
+				charmander (pokeBall has a charmander)
+------------------------------------------
+Inheritance
+	An example of an "is-a" relationship would be pokemon. 
+	You might have the following classes
+		pokemon
+			diglett
+			squirtle
+			charmander
+	diglett, squirtle, and charmander are all types of pokemon.
+	Inheritance would make implementing these take less code
+		Code that applied to all pokemon would be in the pokemon class
+		diglett, squirtle, and charmander classes would be built from the pokemon class
+			They would inherit all the generic data/code
+			They would add their own specific data/code
+	In this Example
+		pokemon is called the Base Class
+		diglett, squirtle, and charmander are called Derived Classes
+---------------------------------------------
+Basic inheritance code
+	Inheritance is implemented as follows:
+		[[code]]
+		class pokemon {
+			... (generic pokemon data and functions) [[desc This can consist of public and private data and functions. ]]
+		};
+		class diglett : public pokemon { [[desc This states that the diglett class will use the pokemon class as it's base class.<br>Any private pokemon data/functions are still private to the pokemon class<br>Any public pokemon data/functions will be public in the diglett class]]
+			... (specific diglett data and functions) [[desc This can consist of public and private data and functions. ]]
+		};
+	Note the ": public pokemon" after "class diglett"
+	Any object of type diglett would contain all the pokemon and diglett data and functions.
+		Some of the data/functions would be "inherited" from the pokemon class
+		Some of the data/functions would be written in the diglett class
+		Private members of the pokemon class would remain private to that class and need to be accessed using accessors/mutators, even from the diglett class
+---------------------------------------------
+Practice
+	Write a simple Implementation for the following pokemon and diglett classes
+		[[code]]
+		class pokemon {
+			private:
+				int health; //hit points -- pokemon faints at 0
+			public:
+				pokemon(); //initializes variables
+				bool isAlive(); //returns true if health > 0
+				void incrementHealth(); //adds 1 to health
+				void decrementHealth(); //subtracts 1 from health
+		};
+		class diglett : public pokemon {
+			private: 
+				float circumference; //in cm
+			public:
+				diglett(); //initialize variables
+				void feed(); //adds 1 to health
+				void dig(); //subtracts 2 from health
+		};
+	Put cout statements in the functions so you can see when they're called, then create an object of type diglett and call all the functions.
+---------------------------------------------
+Composition
+	An example of a "has-a" relationship would be a pokeBall. 
+	You might have the following classes
+		pokeBall
+			diglett
+			squirtle
+			charmander
+	diglett, squirtle, and charmander are all things that a pokeBall has.
+	The pokeBall class would contain instances of diglett(s), squirtle(s), and charmander(s)
+
+---------------------------------------------
+Basic composition code
+	Composition is implemented as follows:
+		[[code]]
+		class squirtle { 
+			... (squirtle data and functions) [[desc This can consist of public and private data and functions. ]]
+		};
+		class charmander { 
+			... (charmander data and functions) [[desc This can consist of public and private data and functions. ]]
+		};
+		class pokeBall {
+			private:
+				squirtle favoriteSquirtle; 
+				charmander charmanders[3];
+			... (other data and functions) 
+		};
+	Any object of type pokeBall would contain a squirtle object and 3 charmander objects.
+---------------------------------------------
+Practice
+	Starting with the previous example, 
+		write simple implementation for each class
+		put cout statements in each constructor so you can see when they're called
+		declare an object of type pokeBall and see what is created!
+	
+---------------------------------------------
+
