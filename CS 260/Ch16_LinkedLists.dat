@@ -31,7 +31,7 @@ Basic Properties
 	We never want to change the value of the head because we would lose the first item in the linked list.
 	If we want to traverse a linked list, we should create a separate pointer to do so.
 
-[[img CS 260/images/singly-linked-list.png]]
+[[img images/singly-linked-list.png]]
 
 -------------------------------------------
 How to Create
