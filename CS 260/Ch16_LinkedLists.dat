@@ -1,0 +1,61 @@
+------------------------------------------
+Ch 16 - Linked Lists
+	This presentation covers Linked Lists, including:
+			What are they?
+			Basic Properties
+			How to Create
+			How to Manipulate
+				Inserting & Deleting Nodes
+		
+------------------------------------------
+What are they?
+	You have already worked with sequential lists: Arrays
+		Arrays are sequential because their components are contiguous in memory
+		Arrays have limitations
+			Fixed size
+			Sorting, Searching, Insertion, and Deletion can be time consuming
+	Linked Lists help you overcome these limitations
+		Components (AKA nodes) of a linked list need not be contiguous in  memory
+		Their size can change dynamically
+		It is much easier to insert and delete items
+		You can use your knowledge of pointers to create these non-sequential lists
+			
+-------------------------------------------
+Basic Properties
+	A linked list is a collection of components called "nodes"
+	Every node can store data (just like an array component)
+	Every node (except the last) also contains the address of the next node
+		This adress is called the link. It is a pointer.
+		The last node  (the "tail") contains a null pointer
+	The address of the first node is stored in a separate location called the "head" or "first"
+	We never want to change the value of the head because we would lose the first item in the linked list.
+	If we want to traverse a linked list, we should create a separate pointer to do so.
+
+[[img CS260/images/singly-linked-list.png]]
+
+-------------------------------------------
+How to Create
+	Since each  node contains two components, we must declare each node as a class or struct.
+	To create a linked list of integers with one node, we can do the following:
+
+			[[code]]
+		struct  nodeType
+		{
+			int value; // to store data in the node
+			nodeType* next; // a pointer to the next node
+		};	
+		
+		void main(){
+			// Declare a ptr to a node to create the head of the linked list
+			nodeType* head = NULL;
+			// Declare a ptr to a node for a new item in the list
+			nodeType* newNode;
+			// Use newNode to dynamically allocate a new node in memory
+			newNode = new nodeType;
+			newNode->value = 5; // Stores 5 in the node
+			newNode->next = NULL; // This is the only node in the list for now
+			// Make head point to newNode, the first node in the list
+			head = newNode; // legal because they are both ptrs to a node
+		}
+		[[code]]
+---------------------------------------------
