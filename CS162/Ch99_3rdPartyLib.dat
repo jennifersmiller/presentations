@@ -71,7 +71,7 @@ Static vs Dynamic Linking
 		You can change the method during development.
 ---------------------------------------------
 Dynamically Linked Library Location
-	When using dynamic linking, Windows will look is certain locations for the .dlls as described here:
+	When using dynamic linking, Windows will look in certain locations for the .dlls as described here:
 		[[http://msdn.microsoft.com/en-us/library/7d83bc18.aspx!http://msdn.microsoft.com/en-us/library/7d83bc18.aspx]]
 		Note: the "PATH" can be viewed using the path command from the cmd prompt
 	On 64 bit machines, 32bit and 64bit .dlls are stored in different locations
