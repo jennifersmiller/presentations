@@ -95,7 +95,7 @@ SFML Project Configuration
 Practice
 	If you haven't already done so, verify the location of the header files and .dlls. 
 		On the classroom computers:
-			header files are in C:\SFML-2.3.2\include
+			header files are in C:\SFML-2.5.1\include
 			copies of the .dlls are in C:\Windows\SysWOW64
 				Go there and look for files beginning with "sfml-"
 	Create a console project
