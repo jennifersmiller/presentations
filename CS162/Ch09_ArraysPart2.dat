@@ -195,7 +195,7 @@ More dimensions
 		int lotsOfData[2][5][7][3];
 	When passing multidimensional arrays to a function only the first index can be left out.
 		[[code]]
-		void initialize(float sales[][YEARS][MONTHS], size);
+		void initialize(float sales[][YEARS][MONTHS], int size);
 -------------------------------------------
 Practice
 	Create a three dimensional array to hold an image.  
