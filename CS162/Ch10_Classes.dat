@@ -17,7 +17,7 @@ OOP
 	Objects consist of:
 		properties (variables) - these hold all the infomation about the object
 		methods (functions) - these allow the manipulation or modification of those properties
-	In most languages, objects are defined using the classes
+	In most languages, objects are defined using classes
 ------------------------------------------
 Introduction
 	Like structs, classes allow us to group together related variables as one unit
