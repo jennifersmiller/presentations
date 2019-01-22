@@ -9,15 +9,15 @@ Classes (Ch 10)
 		How to use your classes in a project
 ---------------------------------------------
 OOP
-Object Oriented Programming is a programming paradigm that builds the program from objects that interact with one another
-The three basic principles of Object Oriented Programming are:
-	Encapsulation - The ability to combine data and operations on that data in a single unit
-	Inheritance - The ability to create new objects (classes) from existing objects (classes)
-	Polymorphism - The ability to use the same expression to denote different operations
-Objects consist of:
-properties (variables) - these hold all the infomation about the object
-methods (functions) - these allow the manipulation or modification of those properties
-In most languages, objects are defined using the classes
+	Object Oriented Programming is a programming paradigm that builds the program from objects that interact with one another
+	The three basic principles of Object Oriented Programming are:
+		Encapsulation - The ability to combine data and operations on that data in a single unit
+		Inheritance - The ability to create new objects (classes) from existing objects (classes)
+		Polymorphism - The ability to use the same expression to denote different operations
+	Objects consist of:
+		properties (variables) - these hold all the infomation about the object
+		methods (functions) - these allow the manipulation or modification of those properties
+	In most languages, objects are defined using the classes
 ------------------------------------------
 Introduction
 	Like structs, classes allow us to group together related variables as one unit
