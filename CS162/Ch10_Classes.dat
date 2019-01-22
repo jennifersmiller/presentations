@@ -29,8 +29,6 @@ Introduction
 		may be variables or functions
 		may be hidden from the person using the class 
 	Technically structs have the same capabilities as classes in C++ with some very minor differences, but it is standard practice to use classes instead of structs if the object needs to have functionality associated with it.
-		Struct: Use if you need to create a data type with numerous data members
-		Class: Use if you need to create a data type with numerous data members and functions 
 ------------------------------------------
 Creating classes and objects  
 	You use the class keyword to define what the class looks like. 
