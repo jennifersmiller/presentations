@@ -1,5 +1,5 @@
 ------------------------------------------
-Classes (Ch 11)
+Classes (Ch 10)
 	This presentation covers
 		An Introduction to classes
 		How to create classes and objects from those classes
@@ -7,19 +7,30 @@ Classes (Ch 11)
 		How to use the scope operator (::)
 		How to separate your code into header and implementation files
 		How to use your classes in a project
+---------------------------------------------
+OOP
+Object Oriented Programming is a programming paradigm that builds the program from objects that interact with one another
+The three basic principles of Object Oriented Programming are:
+	Encapsulation - The ability to combine data and operations on that data in a single unit
+	Inheritance - The ability to create new objects (classes) from existing objects (classes)
+	Polymorphism - The ability to use the same expression to denote different operations
+Objects consist of:
+properties (variables) - these hold all the infomation about the object
+methods (functions) - these allow the manipulation or modification of those properties
+In most languages, objects are defined using the classes
 ------------------------------------------
 Introduction
 	Like structs, classes allow us to group together related variables as one unit
 	Classes also allow us to
 		control access to that data
 		provide an easy-to-use interface to the data
-			i.e. implement [[data abstraction!http://en.wikipedia.org/wiki/Data_abstraction]]
 	The components of a class
 		are called members
 		may be variables or functions
 		may be hidden from the person using the class 
 	Classes are how C++ implements Object Oriented Programming
----------------------------------------------
+	Note: Technically structs can do the same thing as classes in C++ with some very minor differences, but most people use classes instead of structs if the object needs to have functionality associated with it.
+------------------------------------------
 Creating classes and objects  
 	You use the class keyword to define what the class looks like. 
 		Note: this defines a new variable type, but does not create a variable.
