@@ -236,18 +236,13 @@ Sample Implementation File
 
 -------------------------------------------
 Using Your Class in a Program
-	To use your class code in another project, you'll need to do the following [[img presentations/CS162/images/ProjectMultifile.PNG]]
+	To use your class code in another project, you'll need to do the following
 		Create a project as usual
 		In the source file section
 			Add a source file (.cpp) to hold your program's main code
 			Add a source file for each class you'll be using (.cpp)
 		In the header file section
 			Add header files (.h) for each class you'll be using 
-	The example to the right shows a project named FunGame that contains
-		A .cpp file for the main code (FunGame.cpp)
-		.cpp files containing class implementations for three different classes
-		.h files for class definitions for three different classes
-	When you build this project, it will compile the 4 .cpp files into 4 .obj files, then link them together into an executable.
 		
 		
 -------------------------------------------
