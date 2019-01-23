@@ -236,7 +236,7 @@ Sample Implementation File
 
 -------------------------------------------
 Using Your Class in a Program
-	To use your class code in another project, you'll need to do the following [[img CS162/images/ProjectMultifile.PNG]]
+	To use your class code in another project, you'll need to do the following [[img presentations/CS162/images/ProjectMultifile.PNG]]
 		Create a project as usual
 		In the source file section
 			Add a source file (.cpp) to hold your program's main code
