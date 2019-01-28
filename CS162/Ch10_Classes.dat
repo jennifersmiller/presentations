@@ -125,16 +125,16 @@ Practice
 			public:
 				Clock() {
 					//add code to initialize minute to 0
-				};
+				}
 				bool setMinute(int min) {
 					//add code here to 
 					//	validate min (must be >=0 and < 60)
 					//	and use it to set minute
 					//	if min was valid, return true, else return false
-				};
+				}
 				int getMinute() {
 					//add code to return the value in minute
-				};
+				}
 		};
 		
 		int main() {
