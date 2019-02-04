@@ -17,13 +17,13 @@ Overview
 	
 -------------------------------------------------
 TrueType Fonts
-	[[Computer Fontshttps://en.wikipedia.org/wiki/Computer_font]] are basically instructions to tell the computer how to draw characters
-	[[TrueTypehttps://en.wikipedia.org/wiki/TrueType]] is a computer font standard developed by Apple and Microsoft in the late 1980's
+	Computer Fonts are basically instructions to tell the computer how to draw characters
+	TrueType is a computer font standard developed by Apple and Microsoft in the late 1980's
 		It has become the most common font standard on Mac, Windows, and the web
 		TrueType font files end in .ttf
 		Windows stores them in C:\Windows\Fonts
 	Older versions of SFML had a default font built in. Later versions dropped the default but support all TrueType fonts, of which there are many
-	You can find TrueType fonts [[herehttps://en.wikipedia.org/wiki/TrueType]]
+	You can find TrueType fonts on the web: https://fonts.google.com/
 
 --------------------------------------------
 Practice
@@ -53,7 +53,7 @@ SFML Font Object
 		If you double clicked on an executable file to run the project, the file must be in the same directory as the exe
 		If you are running the exe using Visual Studio, the current working directory is the location of your source code
 	After the Font object is created/configured, it is used by a Text object to draw text
-	SFML 2.5.1 Font class documentation can be found [[herehttps://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Font.php]]
+	SFML 2.5.1 Font class documentation can be found here: https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Font.php
 	
 ---------------------------------------------
 WARNING!
@@ -88,7 +88,7 @@ SFML Text Object
 		myText.setString("Eat your kale!");
 		myText.setCharacterSize(50); // in pixels, not points!
 		myText.setPosition(left, top); // left and top must be integers previously defined
-	SFML 2.5.1 Text class documentation can be found [[herehttps://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Text.php]]
+	SFML 2.5.1 Text class documentation can be found here: https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Text.php
 ---------------------------------------------
 Drawing Text
 	After the text object is craeted, it is drawn on the screen as follows:
