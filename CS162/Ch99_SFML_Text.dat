@@ -1,174 +1,62 @@
 ------------------------------------------
 SFML Text Drawing
-	SFML is a library that provides a simple interface for the creation of games and multimedia applications
-	SFML stands for Simple and Fast Multimedia Library
-	It provides support for
-		graphics windows
-		event driven input from keyboards, mice, and joysticks
-		2D & 3D graphics
-		Audio and Networking
-	It supports numerous OSs
-		Windows, Linux, Mac OS X
-		Android and iOS support is in progress
-	It's written in C++, but can be used in C, C++, Java, Python, and other languages
-	More info can be found on the [[SFML website!http://www.sfml-dev.org/index.php]]
+	
 -----------------------------------------------------
 Overview
-	Graphics and game development are pretty significant topic, but we're just going to look at the basics we need for our project.
-	These include
-		Creating a Graphics Window into which we can draw
-		Handling events (window closing, key presses, etc..)
-		Drawing rectangles and text.
-	The following slides cover those topics, and provide links to the SFML tutorial pages on each.
-	The full SFML 2.2 tutorial can be found here:
-		[[http://www.sfml-dev.org/tutorials/2.2/!http://www.sfml-dev.org/tutorials/2.2/]]
 	
 -------------------------------------------------
 TrueType Fonts
-	The basic functional design of a game is as shown in the following pseudocode
-		[[code]]
-		Create Window 	[[desc The command window is insufficient for graphics so we need to create a better one.<br>We will, however, still have our command window available for outputting debugging information.<br>When we're all done, we can eliminate the command window entirely.]]
-		While window is open 	[[desc This &quot;game loop&quot; will run until the window is closed.<br>The window is closed as a result of some &quot;event&quot;, such as clicking on the X in the upper-right corner.]]
-			process user input	[[desc We don't wait for user input, we simply see of something has happened (i.e., an event) since the last time we checked.<br> The event can be a mouse movement or click, keyboard key press, etc.<br> SFML takes care of queuing up the events that have occurred since the last time we checked and we can easily ask for them.]]
-			update state of game objects  [[desc All the things that appear on the screen have their information stored in some kind of &quot;data structure&quot; in memory.  In our case (and almost every other case), that will be objects.]]
-			draw new&nbsp;frame  [[desc Every time through the loop we redraw the entire window from scratch. <br> SFML provides &quot;double buffering&quot; which means that there are two frames.  The one the user is currently seeing and the one that they'll see next, which we draw in the background.  After we've completed the new frame, it's switched instantaneously with the one they're seeing. ]]
-	The loop is referred to as the "game loop".  It will easily run 1000's of times a second if we let it.  
-		Fortunately, we can also very easily get it to run slower, such as 30 times a second, for a framerate of 30 fps.  SFML will add whatever "delay" is necessary after drawing each frame to get the framerate we desire.
+	[[Computer Fontshttps://en.wikipedia.org/wiki/Computer_font]] are basically instructions to tell the computer how to draw characters
+	[[TrueTypehttps://en.wikipedia.org/wiki/TrueType]] is a computer font standard developed by Apple and Microsoft in the late 1980's
+		It has become the most common font standard on Mac, Windows, and the web
+		TrueType font files end in .ttf
+		Windows stores them in C:\Windows\Fonts
+	Older versions of SFML had a default font built in. Later versions dropped the default but support all TrueType fonts, of which there are many
+	You can find TrueType fonts [[herehttps://en.wikipedia.org/wiki/TrueType]]
 
 --------------------------------------------
 Practice
-	Create (or open) an empty project which is configured to use the SFML libraries.
-	Copy the previous template code into the source file.
-		Note: it will NOT yet compile, as we haven't created the window object.  We'll do that next
+	
 ---------------------------------------------
 SFML Font Object
-	We'll now look at how to use the SFML objects and functions to implement a simple 2-D game.
-		All the examples given on the following slides are similar to those given in the SFML tutorials.
-		You do NOT need to understand the details of each line, only how to use them.
-		For the most part, you'll use them as shown, with possible minor modifications.
+	In SFML, font information is stored in a Font object
+		The Font object is created
+		Data from a .ttf (TrueType Font) file is loaded into it
+	Example:
+	[[code]]
+		sf::Font myFont;			[[desc Creates a font object named myFont]]
+		if (!myFont.loadFromFile("arial.ttf")){	[[desc Loads the arial.ttf font into the font object. Note: Since no file path is specified, this font file must be in the current working directory. The loadFromFile functino returns true if it was successful; false otherwise.]]
+			// error...
+		}
+	Caution: In the example above, no file path was specified to the arial.ttf file, so the file must be in the current working directory.
+		If you double clicked on an executable file to run the project, the file must be in the same directory as the exe
+		If you are running the exe using Visual Studio, the current working directory is the location of your source code
+	After the Font object is created/configured, it is used by a Text object to draw text
+	SFML 2.5.1 Font class documentation can be found [[herehttps://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Font.php]]
+	
 ---------------------------------------------
 WARNING!
-	To draw graphics you'll need a window into which to draw them.
-		(our regular command window is insufficient)
-	In SFML, this is created as a RenderWindow object
-		The constructor accepts 3 arguments
-			A VideoMode object specifying the width and height
-			A title (that appears on the title bar)
-			Styles (optional)
-	A window can be created with this code:
-	[[code]]
-		sf::RenderWindow window(			[[desc we're creating an object of type RenderWindow which we'll name window<br>RenderWindows is in the sf namespace, as is all SFML stuff]]
-			sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), [[desc This will set the width and height (WINDOW_WIDTH and WINDOW_HEIGHT need to be previously defined as constants)]]
-			"Tetris 2015 - A New Beginning",			[[desc This is the text that will appear in the window's title bar]]
-			sf::Style::Titlebar | sf::Style::Close 		[[desc This line &quot;or's&quot; together two styles.<br>We want a title bar and a standard close button in the upper right corner<br>We don't want it resizeable, which it would be if we left off this third argument.<br>Understanding this isn't essential, just use it like this.]]
-		);
-	Note: Everything in the SFML library is in the sf namespace, so any reference to an SFML object will be prefaced with sf::
-	More details can be found in the [[SFML Window tutorial!http://sfml-dev.org/tutorials/2.1/window-window.php]]
+	
 --------------------------------------------
 Practice
-	Create (or open) an empty project which is configured to use the SFML libraries.
-	Copy the previous template code into the source file.
-		Note: it will NOT yet compile, as we haven't created the window object.  We'll do that next
- as we aren't yet handling the "close window" event in the graphics window
+	
 	
 ---------------------------------------------
 SFML Text Object
-	When a key is pressed or a button is clicked on, an event is generated that your program can respond to.
-		Event info is passed to your program as an object
-	In SFML, that is done as follows:
-	[[code]]
-		//read and process all events that have occurred
-		// since the last time we checked
-		sf::Event event;
-		while (window.pollEvent(event))	{
-			//was Window's close button pressed?
-			if (event.type == sf::Event::Closed)
-				window.close();
-			
-			//Was the space key pressed?
-			if (event.type == sf::Event::KeyPressed 
-			&& event.key.code == sf::Keyboard::Space ) 
-				doSomething();
-		}	
-	The SFML Events tutorial:
-		[[http://sfml-dev.org/tutorials/2.1/window-events.php!http://sfml-dev.org/tutorials/2.1/window-events.php]]
+	
 ---------------------------------------------
 Drawing Text
-	When a key is pressed or a button is clicked on, an event is generated that your program can respond to.
-		Event info is passed to your program as an object
-	In SFML, that is done as follows:
-	[[code]]
-		//read and process all events that have occurred
-		// since the last time we checked
-		sf::Event event;
-		while (window.pollEvent(event))	{
-			//was Window's close button pressed?
-			if (event.type == sf::Event::Closed)
-				window.close();
-			
-			//Was the space key pressed?
-			if (event.type == sf::Event::KeyPressed 
-			&& event.key.code == sf::Keyboard::Space ) 
-				doSomething();
-		}	
-	The SFML Events tutorial:
-		[[http://sfml-dev.org/tutorials/2.1/window-events.php!http://sfml-dev.org/tutorials/2.1/window-events.php]]
+	
 ---------------------------------------------
 Drawing More Text
-	When a key is pressed or a button is clicked on, an event is generated that your program can respond to.
-		Event info is passed to your program as an object
-	In SFML, that is done as follows:
-	[[code]]
-		//read and process all events that have occurred
-		// since the last time we checked
-		sf::Event event;
-		while (window.pollEvent(event))	{
-			//was Window's close button pressed?
-			if (event.type == sf::Event::Closed)
-				window.close();
-			
-			//Was the space key pressed?
-			if (event.type == sf::Event::KeyPressed 
-			&& event.key.code == sf::Keyboard::Space ) 
-				doSomething();
-		}	
-	The SFML Events tutorial:
-		[[http://sfml-dev.org/tutorials/2.1/window-events.php!http://sfml-dev.org/tutorials/2.1/window-events.php]]
+	
 		
 ---------------------------------------------
 Where to Creat Objects
-	You can also check the status of a key to see if it's currently being pressed.
-	This is different than an event.  
-		When you press a key, it generates an event
-		When you let the key up, in generates an event
-		But between those times, it's being held down, which is not in itself an event.
-	The code to check on the status of a key is below.  Notice there's no event object being dealt with
-		[[code]]
-		// determine the state of an individual keyboard key
-		//	   (this is not an event)
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
-			doSomething();
-	The SFML Keyboard, Mouse, and Joystick tutorial:
-		[[http://sfml-dev.org/tutorials/2.1/window-inputs.php!http://sfml-dev.org/tutorials/2.1/window-inputs.php]]
+	
 ----------------------------------------------
 Common Problems
-	Numerous shapes can be easily drawn on the screen
-		rectangles, circles, regular polygons, etc..
-	All shapes have similar properties
-		Size and Location (both are specified in pixels)
-		Outline and Fill Colors (specified using RGB values)
-		Outline Thickness
-	Drawing shapes is a two step process
-		Create a shape object consisting of all the shapes properties
-			Can be done just once 
-		Actually draw the shape as specified on the frame
-			Is done each time a frame is drawn
-	Shape properties can be mofified between frames to create animation
-	The SFML shape tutorial can be found [[here!http://www.sfml-dev.org/tutorials/2.1/graphics-shape.php]]
-	A comprehensive rectangle example is given on the following slide
+	
 ---------------------------------------------
 Practice
-	Add code to your source file to detect
-		when the down arrow key being held down
-			cout "down!" to the console
-	When running your code, note how many more times this occurs than a keypress event
+	
