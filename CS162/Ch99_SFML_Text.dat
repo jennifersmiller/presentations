@@ -83,7 +83,7 @@ SFML Text Object
 		
 		myText.setFont(myFont); // myFont must already exist!	[[desc Sets the font to use when drawing this Text object; myFont must be an object and has already been declared and configured.]]
 		myText.setFillColor(sf::Color::Green);
-		myText.setType(sf::Text::Bold);
+		myText.setStyle(sf::Text::Bold);
 		
 		myText.setString("Eat your kale!");
 		myText.setCharacterSize(50); // in pixels, not points!
