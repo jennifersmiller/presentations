@@ -23,12 +23,12 @@ TrueType Fonts
 		TrueType font files end in .ttf
 		Windows stores them in C:\Windows\Fonts
 	Older versions of SFML had a default font built in. Later versions dropped the default but support all TrueType fonts, of which there are many
-	You can find TrueType fonts on the web: https://fonts.google.com/
+	You can find TrueType fonts on the web: [[https://fonts.google.com/]]
 
 --------------------------------------------
 Practice
 	Download a TrueType font
-		Go to: https://fonts.google.com/
+		Go to: [[https://fonts.google.com/]]
 		Add a font to your collection
 		Click the arrow in the upper right corner to download it
 			Select Download the font families in your Collection as a .zip file
@@ -53,7 +53,7 @@ SFML Font Object
 		If you double clicked on an executable file to run the project, the file must be in the same directory as the exe
 		If you are running the exe using Visual Studio, the current working directory is the location of your source code
 	After the Font object is created/configured, it is used by a Text object to draw text
-	SFML 2.5.1 Font class documentation can be found here: https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Font.php
+	SFML 2.5.1 Font class documentation can be found here: [[https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Font.php]]
 	
 ---------------------------------------------
 WARNING!
@@ -88,7 +88,7 @@ SFML Text Object
 		myText.setString("Eat your kale!");
 		myText.setCharacterSize(50); // in pixels, not points!
 		myText.setPosition(left, top); // left and top must be integers previously defined
-	SFML 2.5.1 Text class documentation can be found here: https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Text.php
+	SFML 2.5.1 Text class documentation can be found here: [[https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Text.php]]
 ---------------------------------------------
 Drawing Text
 	After the text object is craeted, it is drawn on the screen as follows:
@@ -118,7 +118,7 @@ Drawing More Text
 		window.display();
 		
 ---------------------------------------------
-Where to Creat Objects
+Where to Create Objects
 	Font objects are fairly heavy
 		They can take awhile to load
 		You should:
