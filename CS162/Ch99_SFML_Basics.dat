@@ -20,8 +20,8 @@ SFML Basics
 		Handling events (window closing, key presses, etc..)
 		Drawing rectangles and text.
 	The following slides cover those topics, and provide links to the SFML tutorial pages on each.
-	The full SFML 2.2 tutorial can be found here:
-		[[http://www.sfml-dev.org/tutorials/2.2/!http://www.sfml-dev.org/tutorials/2.2/]]
+	The full SFML tutorial can be found here:
+		[[https://www.sfml-dev.org/tutorials/2.5/]]
 	
 -------------------------------------------------
 Overview
@@ -91,7 +91,7 @@ Graphics Window
 			sf::Style::Titlebar | sf::Style::Close 		[[desc This line &quot;or's&quot; together two styles.<br>We want a title bar and a standard close button in the upper right corner<br>We don't want it resizeable, which it would be if we left off this third argument.<br>Understanding this isn't essential, just use it like this.]]
 		);
 	Note: Everything in the SFML library is in the sf namespace, so any reference to an SFML object will be prefaced with sf::
-	More details can be found in the [[SFML Window tutorial!http://sfml-dev.org/tutorials/2.1/window-window.php]]
+	More details can be found in the [[SFML Window tutorial!https://www.sfml-dev.org/tutorials/2.5/window-window.php]]
 ---------------------------------------------
 Framerate
 	Each time through the game loop, a new frame will be drawn
@@ -105,7 +105,7 @@ Framerate
 		);
 		window.setFramerateLimit(30); [[desc sets the minimum framerate to 30 frames per second<br>Caution: if it takes over 1/30 a second to create a frame, the framerate for that frame will be longer.]]
 	This causes SFML to add a delay after drawing the frame so 1/30th of a frame elapses between frames
-	Additional details can be found on the [[SFML setFrameRate() doc page!http://www.sfml-dev.org/documentation/2.1/classsf_1_1Window.php#af4322d315baf93405bf0d5087ad5e784]]
+	Additional details can be found on the [[SFML setFrameRateLimit() doc page!https://www.sfml-dev.org/documentation/2.5.1/classsf_1_1Window.php#af4322d315baf93405bf0d5087ad5e784]]
 ---------------------------------------------
 Practice
 	Add the previously given window and framerate code to your source file and compile/run it.
@@ -134,7 +134,7 @@ Events
 				doSomething();
 		}	
 	The SFML Events tutorial:
-		[[http://sfml-dev.org/tutorials/2.1/window-events.php!http://sfml-dev.org/tutorials/2.1/window-events.php]]
+		[[https://www.sfml-dev.org/tutorials/2.5/window-events.php]]
 ---------------------------------------------
 Practice
 	Add code to your source file to handle
@@ -160,7 +160,7 @@ Status of keys
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 			doSomething();
 	The SFML Keyboard, Mouse, and Joystick tutorial:
-		[[http://sfml-dev.org/tutorials/2.1/window-inputs.php!http://sfml-dev.org/tutorials/2.1/window-inputs.php]]
+		[[https://www.sfml-dev.org/tutorials/2.5/window-inputs.php]]
 ---------------------------------------------
 Practice
 	Add code to your source file to detect
@@ -182,7 +182,7 @@ Drawing shapes
 		Actually draw the shape as specified on the frame
 			Is done each time a frame is drawn
 	Shape properties can be mofified between frames to create animation
-	The SFML shape tutorial can be found [[here!http://www.sfml-dev.org/tutorials/2.1/graphics-shape.php]]
+	The SFML shape tutorial can be found [[here!https://www.sfml-dev.org/tutorials/2.5/graphics-shape.php]]
 	A comprehensive rectangle example is given on the following slide
 ----------------------------------------------
 Drawing Rectangles
@@ -246,7 +246,7 @@ Drawing Regular Polygons
 			
 		window.draw(rock);
 	The SFML shape drawing tutorial:
-		[[http://www.sfml-dev.org/tutorials/2.1/graphics-shape.php!http://www.sfml-dev.org/tutorials/2.1/graphics-shape.php]]
+		[[https://www.sfml-dev.org/tutorials/2.5/graphics-shape.php]]
 -------------------------------------------
 Drawing Other Polygons
 	Irregular, convex polygons can also be easily drawn.  [[img CS162/images/triangle.png]]
@@ -270,5 +270,5 @@ Drawing Other Polygons
 			
 		window.draw(ship);	
 	The SFML shape drawing tutorial:
-		[[http://www.sfml-dev.org/tutorials/2.1/graphics-shape.php!http://www.sfml-dev.org/tutorials/2.1/graphics-shape.php]]
+		[[https://www.sfml-dev.org/tutorials/2.5/graphics-shape.php]]
 	
