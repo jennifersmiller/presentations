@@ -20,8 +20,8 @@ SFML Basics
 		Handling events (window closing, key presses, etc..)
 		Drawing rectangles and text.
 	The following slides cover those topics, and provide links to the SFML tutorial pages on each.
-	The full SFML tutorial can be found here:
-		[[https://www.sfml-dev.org/tutorials/2.5/]]
+	The full SFML tutorial can be found
+		[[here!https://www.sfml-dev.org/tutorials/2.5/]]
 	
 -------------------------------------------------
 Overview
@@ -133,8 +133,7 @@ Events
 			&& event.key.code == sf::Keyboard::Space ) 
 				doSomething();
 		}	
-	The SFML Events tutorial:
-		[[https://www.sfml-dev.org/tutorials/2.5/window-events.php]]
+	The SFML Events [[tutorial!https://www.sfml-dev.org/tutorials/2.5/window-events.php]]
 ---------------------------------------------
 Practice
 	Add code to your source file to handle
@@ -159,8 +158,7 @@ Status of keys
 		//	   (this is not an event)
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 			doSomething();
-	The SFML Keyboard, Mouse, and Joystick tutorial:
-		[[https://www.sfml-dev.org/tutorials/2.5/window-inputs.php]]
+	The SFML Keyboard, Mouse, and Joystick [[tutorial!https://www.sfml-dev.org/tutorials/2.5/window-inputs.php]]
 ---------------------------------------------
 Practice
 	Add code to your source file to detect
@@ -245,8 +243,7 @@ Drawing Regular Polygons
 		rock.setOutlineColor(sf::Color(255, 255, 255)); 
 			
 		window.draw(rock);
-	The SFML shape drawing tutorial:
-		[[https://www.sfml-dev.org/tutorials/2.5/graphics-shape.php]]
+	The SFML shape drawing [[tutorial!https://www.sfml-dev.org/tutorials/2.5/graphics-shape.php]]
 -------------------------------------------
 Drawing Other Polygons
 	Irregular, convex polygons can also be easily drawn.  [[img CS162/images/triangle.png]]
@@ -269,6 +266,5 @@ Drawing Other Polygons
 		ship.setOutlineColor(sf::Color(255, 255, 255)); 
 			
 		window.draw(ship);	
-	The SFML shape drawing tutorial:
-		[[https://www.sfml-dev.org/tutorials/2.5/graphics-shape.php]]
+	The SFML shape drawing [[tutorial!https://www.sfml-dev.org/tutorials/2.5/graphics-shape.php]]
 	
