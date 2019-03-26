@@ -1,5 +1,5 @@
 ------------------------------------------
-Dynamically Allocated Objects (Ch 13), Part 2
+Dynamically Allocated Objects, Part 2
 	This presentation covers
 		Using new and delete with classes
 		Object Pointer Notation
@@ -16,11 +16,12 @@ new and delete with classes
 			...
 		}
 		...
-		main() {
-			Cat* p1=0;	//declares a Cat pointer 
-			p1 = new Cat;	//allocates memory for a Cat
+		int main() {
+			Cat* p1=nullptr;	//declares a Cat pointer 
+			p1 = new Cat;		//allocates memory for a Cat
 			...
 			delete p1;		//frees up allocated memory
+			return 0;
 		}
 ---------------------------------------------
 Practice
@@ -97,7 +98,7 @@ Practice
 ---------------------------------------------
 Arrays of Pointers
 	You can have an array of pointers
-	Since pointers should either contain a valid memory address or Null, it'd be wise to initialize them to null
+	Since pointers should either contain a valid memory address or null, it'd be wise to initialize them to null
 		This allows you to keep track of which ones are valid
 	You'd then need to call new for each element in the array to create the actual Objects
 	Simple Example:
