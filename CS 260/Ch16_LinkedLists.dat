@@ -28,7 +28,7 @@ Basic Properties
 		This adress is called the link. It is a pointer.
 		The last node  (the "tail") contains a null pointer
 	The address of the first node is stored in a separate location called the "head" or "first"
-	We never want to change the value of the head (unless we are inserting a new node at the beginning of the list) because we would lose the first item in the linked list.
+	We never want to change the value of the head (unless we are inserting a new node at the beginning of the list) because we would lose track of the first item in the linked list.
 	If we want to traverse a linked list, we should create a separate pointer to do so.
 
 [[img images/singly-linked-list.png]]
