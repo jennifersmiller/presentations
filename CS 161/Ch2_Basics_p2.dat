@@ -53,7 +53,7 @@ strings
 	A string is s sequence of zero or more characters
 		Literal strings are enclosed in doublequotes
 		[[code]]
-			string name = "Rich";
+			string name = "Jen";
 		A string with zero characters is called a null (or empty) string
 		The string data type is NOT a simple datatype, and a library is required for it's use (strings are covered in ch 10).  
 	string datatype support
