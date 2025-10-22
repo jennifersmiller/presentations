@@ -17,7 +17,7 @@ If statement
 			statement done if true;
 	Example
 		[[code]]
-		if (grade > 90)
+		if (grade > 89)
 			cout &lt;&lt; "You earned an A! \n";
 -------------------------------------------
 Compound Statements
@@ -31,7 +31,7 @@ Compound Statements
 		}
 	Incorrect Examples - prints "You're brilliant!" regardless of grade value
 		[[code]]
-		if (grade > 90)
+		if (grade > 89)
 			cout &lt;&lt; "Your grade is an 'A'";
 			cout &lt;&lt; "You're brilliant!";
 
@@ -45,12 +45,12 @@ IF Else statements
 			statement done if false;
 	For example:
 	[[code]]	
-		if (grade > 90)
+		if (grade > 89)
 			cout &lt;&lt; "You earned an A! \n";
 		else
 			cout &lt;&lt; "You didn't earn an A. \n";
 			
-		if (grade > 90) {
+		if (grade > 89) {
 			cout &lt;&lt; "You earned an A! \n";
 			cout &lt;&lt; "You're brilliant!";
 		}
@@ -212,10 +212,10 @@ Misc
 			cout &lt;&lt; "The letter is not uppercase.\n";
 --------------------------------------------
 Practice
-	Modify your previous example to 
+	Modify your previous example to: 
 		Get a character from the user
-		Prints out wether the entered character is a letter or not (twice)
-			The first time using an if expression that consists of a combination of logical and boolean operators
+		Prints out whether or not the entered character is a letter (twice)
+			The first time using an if expression that consists of a combination of logical and relational operators
 			The 2nd time using the isalpha() function to do the same thing
 	When run, the output will be similar to this:
 	[[code]]
@@ -226,3 +226,4 @@ Practice
 
 	
 	
+
