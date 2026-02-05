@@ -3,8 +3,8 @@ Ch 5 - Repetition Structures, part 1
 	At the end of this presentation you will be able to
 		Explain what a repetition structure is
 		List the three types of repetition structures available in C/C++ and explain when each should be used
-		Expalin how each of the repitition strucures works and use each appropriately
-		Explain how the unstructured break and continue statements work and when they should and should not be used
+		Explain how each of the repetition strucures works and use each appropriately
+		Explain how the unstructured break and continue statements work and when they should (and should not) be used
 		Use multiple variables in a for loop
 		Implement nested loops
 ------------------------------------------
@@ -15,7 +15,7 @@ Overview
 		Execute a block of code while a condition is true
 		Execute a block of code a predetermined number of times using a counter
 	Many times the same results can be achieved using any one of these three types of structures, but there's typically a best choice for a given situation.
-	Loops are similar to ifs in that without { } the body of the loop is only one line.
+	Loops are similar to ifs in that without { } the body of the loop is only one line
 	
 ------------------------------------------
 While 
@@ -55,7 +55,7 @@ Practice
 	Note: A for loop is a better choice for both of these...
 ------------------------------------------
 Sentinel-controlled while
-	A sentinal is a value that signifies the loop is to end
+	A sentinel is a value that signifies the loop is to end
 		Example:
 			[[code]]
 			char ch;
@@ -103,7 +103,7 @@ Multiple exit conditions
 Practice
 	Write a simple program that 
 		requests the user enter a vowel, and continues to do so until a vowel is entered.
-		whenever a non-vowel is entered print a message saying "that's not a vowel, try again".
+		whenever a non-vowel is entered print a message saying "that's not a vowel; try again".
 	After a vowel is entered print a congratulations message.
 -------------------------------------------
 Do while
@@ -170,14 +170,14 @@ For Details
 			cout &lt;&lt; x;
 ------------------------------------------
 For vs while
-	for loops can always be written as while loops, but there is an appropriate place for each
-	A for loop should be used when you know how many times the loop will execute when you start the loop
+	A for loop can always be written as a while loop, but there is an appropriate place for each
+	A for loop should be used when you know exactly how many times the loop will execute
 		The for loop specifies the initial value, exit condition, and loop counter all on one line
 		Somone looking at the code knows a lot about the loop right away which is very helpful
 	A while loop should be used when you don't know how many times the loop will run when you begin the loop
-		i.e. it will be a sentinal controlled loop.  
+		i.e. it will be a sentinel-controlled loop.  
 		Exit will be determined by something that happens within the loop that can't be predicted ahead of time
-	A do while can be used in place of a while if you always want to execute the loop body at least once.
+	A do while loop can be used in place of a while loop if you always want to execute the loop body at least once
 -------------------------------------------
 Practice
 	What type of loop should be used for each of the following, and why:
